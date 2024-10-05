@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parooli generaator</title>
+</head>
+<body>
+    <h1>Parooli generaator</h1>
+    <label for="pikkus">Parooli pikkus:</label>
+    <input type="number" id="pikkus" min="8" max="20">
+    <br><br>
+    <label for="valik">Vali kriteeriumid:</label>
+    <br>
+    <input type="checkbox" id="suurtaht"> Suurtähed
+    <br>
+    <input type="checkbox" id="vaiketaht"> Väiketähed
+    <br>
+    <input type="checkbox" id="numbrid"> Numbrid
+    <br>
+    <input type="checkbox" id="sumbolid"> Sümbolid
+    <br><br>
+    <button onclick="genereeriParool()">Genereeri parool</button>
+    <p id="tulemus"></p>
+
+    <script src="generaator.js"></script>
+</body>
+</html>
