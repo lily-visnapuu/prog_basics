@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatuuri teisendamine</title>
+</head>
+<body>
+    <h1>Temperatuuri teisendamine</h1>
+    <label for="temperatuur">Sisesta temperatuur numbrites:</label>
+    <input type="text" id="temperatuur">
+    <br><br>
+    <label for="skaala">Vali skaala:</label>
+    <br>
+    <input type="radio" value="C" name="skaala" id="celsius">
+    <label for="celsius">Celsius</label>
+    <br>
+    <input type="radio" value="F" name="skaala" id="farenheit">
+    <label for="fahrenheit">Fahrenheit</label>
+    <br><br>
+    <button onclick="teisendaTemp()">Teisenda</button>
+
+    <script src="temperatuur.js"></script>
+</body>
+</html>
