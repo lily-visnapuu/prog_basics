@@ -1,0 +1,430 @@
+$primary-color: #4b00cc96;
+$secondary-color: #ffffff;
+$text-color: #333;
+$button-color: #333;
+$button-text-color: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $secondary-color;
+    color: $text-color;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    background: linear-gradient(135deg, #4b00cc96, #6600FF);
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+
+        input {
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 1em;
+        }
+
+        button {
+            background-color: $button-color;
+            color: $button-text-color;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+// Hero sektsioon
+
+.hero {
+    background: linear-gradient(135deg, #4b00cc96, #6600FF);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color;
+
+    h1 {
+        font-size: 2em;
+        color: #ffffff;
+    }
+}
+
+
+
+.categories {
+    padding: 4em 1em;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 1em;
+    }
+}
+
+
+
+// Kategooria menyykene
+
+#category-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center; /* Keskele joondamine */
+  padding: 0;
+}
+
+#category-menu li {
+  padding: 8px 16px;
+  border: 1px solid #6600FF;
+  border-radius: 5px;
+  color: #6600FF;
+  text-decoration: none;
+  font-weight: normal;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+#category-menu li:hover {
+  background-color: #6600FF;
+  color: #fff;
+}
+
+
+
+
+//Tootekaardid ja sisu
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+  }
+}
+
+#product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Suurendame vahemaad kaartide vahel */
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 20px; /* Lisame rohkem ruumi kaardi sees */
+  border-radius: 8px;
+  width: 250px; /* Suurendame laiust */
+  height: 500px; /* Suurendame kõrgust */
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  width: 100%;
+  height: 250px; /* Fikseeritud kõrgus pildile, et pildid oleksid suured, kuid mahuksid kaardi sisse */
+  object-fit: cover; /* Kärbib ja tsentreerib pilti, et see sobiks määratud ruumi */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 1.1rem; /* Suurendame fondi suurust */
+  color: #6600FF;
+  margin: 10px 0;
+  flex-grow: 1; /* Täidab ülejäänud vertikaalse ruumi */
+}
+
+.product-item p {
+  font-size: 1.4rem; /* Suurem hindade font */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.product-item button {
+  background-color: #6600FF;
+  color: #fff;
+  padding: 10px 20px; /* Suurendame nupu suurust */
+  font-size: 1rem; /* Suurem fondi suurus nupul */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto; /* Viib nupu kaardi alaossa */
+}
+
+.product-item button:hover {
+  background-color: #3a0092;
+}
+
+
+
+
+// Tootelehel olevad elemendid
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Joondab sisu keskele */
+  max-width: 600px; /* Piirab konteineri laiust */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.product-detail img {
+  max-width: 100%; /* Pildi maksimaalne laius */
+  height: auto;
+  object-fit: cover; /* Säilitab proportsioonid */
+  border-radius: 8px;
+  margin-bottom: 60px; /* Lisab vahet alla */
+}
+
+.product-detail h2 {
+  font-size: 1.5rem;
+  color: #6600FF;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.product-detail p {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.product-detail .price {
+  font-weight: bold;
+  color: #6600FF;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.product-detail .stock {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.product-detail button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #6600FF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.product-detail button:hover {
+  background-color: #3a0092;
+}
+
+#back-to-category {
+  background-color: #999;
+}
+
+#back-to-category:hover {
+  background-color: #636363;
+}
+
+
+//Ostukorv
+
+/* Shopping cart container */
+#shopping-cart {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#shopping-cart h2 {
+  color: #6600FF;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Cart items container */
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual cart item */
+#cart-items-info {
+  padding: 60px 15px 60px 15;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column; /* Paigutab elemendid vertikaalselt */
+  gap: 10px; /* Määrab vahe elementide vahel */
+}
+
+#cart-items-info:last-child {
+  border-bottom: none;
+}
+
+/* Product title */
+#cart-items-info h3 {
+  font-size: 1.2rem;
+  max-width: 280px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Price and stock information */
+#cart-items-info p {
+  font-size: 1rem;
+  color: #666;
+  margin: 3px 0;
+  font-weight: bolder;
+}
+
+/* Quantity controls */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-container button {
+  background-color: #6600FF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 30px;
+  margin: 10px 5px 10px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-container button:hover {
+  background-color: #3a0092;
+}
+
+.quantity-container input[type="number"] {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Remove button */
+#remove button {
+  background-color: #FF6666;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#remove button:hover {
+  background-color: #cc0000;
+}
+
+/* Total section */
+#cart-total {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Action buttons (Buy and Back) */
+#shopping-cart button {
+  padding: 8px 15px;
+  margin: 10px 5px;
+  background-color: #6600FF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#shopping-cart button:hover {
+  background-color: #3a0092;
+}
+
+#product-list {
+  display: flex;
+  flex-direction: row;      
+  align-content: center;     
+  justify-content: flex-end; 
+  gap: 10px; 
+  margin-top: 20px;
+}
+
+#cart-buy, #cart-back {
+  padding: 8px 15px;
+  margin: 10px 5px;
+  background-color: #6600FF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#cart-buy:hover,#cart-back:hover {
+  background-color: #3a0092;
+}
+
+#cart-back {
+  padding: 8px 15px;
+  margin: 10px 5px;
+  background-color: #999;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#cart-back:hover {
+  background-color: #636363;
+}
+
+
+/* Peida Products pealkiri */
+.products #title {
+  display: none;
+}
